@@ -1,12 +1,12 @@
 # ⚡ Apex Iron Portal - Gym Membership & Workout Tracker
 
-[cite_start]Welcome to the Apex Iron Portal, a dynamic, full-stack Progressive Web Application (PWA) built as part of the COMP50075 Web Development module at the University of Staffordshire[cite: 1, 37].
+
 
 ---
 
 ## 🔗 Live Production Deployment
 Live Hosted URL: https://webassignment-11507.web.app/
-GitHub Repository URL: 
+GitHub Repository URL: https://github.com/Nimesh-Dilushan/WDAssignment2521
 [cite_start] Production Build Status: Deployed via Firebase Hosting with full HTTPS Security.
 
 ---
