@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-accent: var(--accent-color);
+  --color-accent-bg: var(--accent-bg-color);
+  --color-accent-border: var(--accent-border-color);
+  
+  --animate-fade-in: fade-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scale-up: scale-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-down: slide-down 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scale-up {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slide-down {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+:root {
+  --accent-color: #111827;
+  --accent-bg-color: rgba(17, 24, 39, 0.05);
+  --accent-border-color: rgba(17, 24, 39, 0.2);
+}
+
+.theme-violet {
+  --accent-color: #7c3aed;
+  --accent-bg-color: rgba(124, 58, 237, 0.05);
+  --accent-border-color: rgba(124, 58, 237, 0.2);
+}
+
+.theme-cyan {
+  --accent-color: #0891b2;
+  --accent-bg-color: rgba(8, 145, 178, 0.05);
+  --accent-border-color: rgba(8, 145, 178, 0.2);
+}
+
+.theme-emerald {
+  --accent-color: #059669;
+  --accent-bg-color: rgba(5, 150, 105, 0.05);
+  --accent-border-color: rgba(5, 150, 105, 0.2);
+}
+
+/* Base style resets to support Tailwind dark mode classes */
+@layer base {
+  body {
+    @apply transition-colors duration-300 bg-zinc-50 text-zinc-600 dark:bg-zinc-950 dark:text-zinc-400 min-h-screen selection:bg-accent-bg selection:text-accent font-sans antialiased;
+  }
+}
+
+.dark {
+  --accent-color: #e4e4e7;
+  --accent-bg-color: rgba(228, 228, 231, 0.1);
+  --accent-border-color: rgba(228, 228, 231, 0.3);
+}
+.dark .theme-violet,
+.dark.theme-violet {
+  --accent-color: #c084fc;
+  --accent-bg-color: rgba(192, 132, 252, 0.15);
+  --accent-border-color: rgba(192, 132, 252, 0.5);
+}
+.dark .theme-cyan,
+.dark.theme-cyan {
+  --accent-color: #22d3ee;
+  --accent-bg-color: rgba(34, 211, 238, 0.15);
+  --accent-border-color: rgba(34, 211, 238, 0.5);
+}
+.dark .theme-emerald,
+.dark.theme-emerald {
+  --accent-color: #34d399;
+  --accent-bg-color: rgba(52, 211, 153, 0.15);
+  --accent-border-color: rgba(52, 211, 153, 0.5);
+}

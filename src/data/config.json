@@ -1,0 +1,10 @@
+{
+  "gymName": "Apex Iron Portal",
+  "adminEmail": "admin@ironportal.com",
+  "operatingHours": "06:00 AM - 10:00 PM",
+  "supportContact": "+1 (555) 012-3456",
+  "enableOfflineCaching": true,
+  "enableBackgroundSync": true,
+  "membershipTiers": ["Bronze", "Silver", "Gold", "Platinum"],
+  "allowedWorkoutCategories": ["Hypertrophy", "Cardio", "Powerlifting", "Flexibility"]
+}
